@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Edit Product {{product.pname}}</h2>
+        <!-- Send product info to edit function -->
+        <form #productInfo="ngForm" (ngSubmit)="edit(productInfo)" class="form form-bordered" novalidate="novalidate" autocomplete="off">
+          <div class="form-group">
+            <label for="pname">Product Name</label>
+            <input type="text" name="pname" id="pname" class="form-control" [(ngModel)]="product.pname">
+          </div>
+          <div class="form-group">
+              <label for="description">Product Description</label>
+              <textarea name="description" id="description" cols="30" rows="5" class="form-control" [(ngModel)]="product.description"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="price">Price</label>
+              <input type="number" name="price" id="price" class="form-control" [(ngModel)]="product.price">
+          </div>
+          <button type="submit" name="submit" class="btn btn-success float-right">Edit Product</button>
+          <a href="" routerLink="/products" class="btn btn-secondary float-left">Back</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  
